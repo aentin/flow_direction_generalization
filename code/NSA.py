@@ -32,7 +32,7 @@ class NSA(object):
         self.proj = proj
         self.ndv = ndv
         self.cells = np.full((self.flowacc_array.shape[0] // self.k, self.flowacc_array.shape[1] // self.k), 255, dtype=np.uint8)
-        self.flowacc_aggr = self.cells.copy()
+        self.flowacc_aggr = np.full((self.flowacc_array.shape[0] // self.k, self.flowacc_array.shape[1] // self.k), 0, dtype=np.float64)
         self.krows = self.cells.shape[0]
         self.kcols = self.cells.shape[1]
 
